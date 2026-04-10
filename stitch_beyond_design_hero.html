@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:ital,wght@0,100..900;1,100..900&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#862200",
+                        "primary-container": "#ff5721",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#3a3939",
+                        "inverse-primary": "#b02f00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed": "#3b0a00",
+                        "tertiary": "#a9c7ff",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error-container": "#93000a",
+                        "outline": "#ab897f",
+                        "on-primary-fixed": "#3b0a00",
+                        "surface-dim": "#131313",
+                        "secondary": "#ffb5a0",
+                        "on-secondary": "#5f1500",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#002957",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#001b3e",
+                        "on-surface-variant": "#e5beb4",
+                        "on-secondary-fixed-variant": "#80290e",
+                        "surface-container": "#201f1f",
+                        "primary": "#ffb5a0",
+                        "on-secondary-container": "#ff9b7e",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-primary": "#5f1500",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "outline-variant": "#5b4039",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#80290e",
+                        "secondary-fixed": "#ffdbd1",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdbd1",
+                        "on-primary-container": "#531200",
+                        "tertiary-container": "#3d90ff",
+                        "on-tertiary": "#003064",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "on-tertiary-fixed-variant": "#00468c",
+                        "background": "#131313",
+                        "surface-tint": "#ffb5a0",
+                        "error": "#ffb4ab",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"],
+                        "display": ["Bebas Neue", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #0a0a0a; color: #e5e2e1; }
+        .squiggle-path { stroke: #E8450A; stroke-width: 6; fill: none; stroke-linecap: round; }
+        .no-radius { border-radius: 0px !important; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-white">
+<div class="fixed inset-0 grain-overlay z-[60]"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0a0a0a]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1440px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#e5e2e1] uppercase font-headline">
+                BEYOND DESIGN
+            </div>
+<div class="hidden md:flex gap-12 items-center font-headline uppercase tracking-tighter font-bold text-sm">
+<a class="text-[#E8450A] border-b-2 border-[#E8450A] pb-1 hover:text-[#E8450A] transition-colors duration-300" href="#">HOME</a>
+<a class="text-[#e5e2e1] hover:text-[#E8450A] transition-colors duration-300" href="#">OUR WORK</a>
+<a class="text-[#e5e2e1] hover:text-[#E8450A] transition-colors duration-300" href="#">SERVICES</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-tighter scale-95 active:scale-90 transition-transform">
+                Book a call →
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Section 1: Hero Updated to match IMAGE_7 -->
+<section class="min-h-screen flex flex-col justify-center px-8 max-w-[1440px] mx-auto relative overflow-hidden">
+<div class="flex flex-col mb-4">
+<h1 class="text-[12vw] font-black tracking-tighter font-headline leading-[0.85] text-white uppercase">
+                    BEYOND<br/>DESIGN
+                </h1>
+<div class="mt-4 italic text-2xl font-light opacity-90">you imagine</div>
+</div>
+<div class="relative w-full mb-12 flex items-center">
+<svg class="w-full h-12 flex-grow" preserveaspectratio="none" viewbox="0 0 1000 60">
+<path class="squiggle-path" d="M0 30 Q 50 10, 100 30 T 200 30 T 300 30 T 400 30 T 500 30 T 600 30 T 700 30 T 800 30 T 900 30 L 1000 30"></path>
+</svg>
+<div class="pl-4 whitespace-nowrap">
+<span class="text-sm font-bold tracking-[0.4em] uppercase text-white">we build</span>
+</div>
+</div>
+<div class="mt-8 text-center md:text-left">
+<h2 class="text-[12vw] md:text-[13vw] font-display leading-[0.8] tracking-tight uppercase mb-12">
+                INDULGING EXPERIENCE
+            </h2>
+<p class="text-2xl md:text-4xl font-light italic text-on-surface/90">
+                we don't just build websites, we build <span class="text-primary-container font-bold not-italic">scalable</span> experiences
+            </p>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full"></div>
+</section>
+<!-- Marquee -->
+<div class="bg-[#0e0e0e] py-8 border-y border-outline-variant/10 overflow-hidden">
+<div class="animate-marquee whitespace-nowrap">
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8">DREAM.DESIGN.DELIVER.</span>
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8 text-primary-container">DREAM.DESIGN.DELIVER.</span>
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8">DREAM.DESIGN.DELIVER.</span>
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8 text-primary-container">DREAM.DESIGN.DELIVER.</span>
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8">DREAM.DESIGN.DELIVER.</span>
+<span class="text-4xl md:text-6xl font-display tracking-widest px-8 text-primary-container">DREAM.DESIGN.DELIVER.</span>
+</div>
+</div>
+<!-- Section 2: Our Work -->
+<section class="py-32 px-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<h2 class="text-xs font-bold tracking-[0.3em] text-primary-container mb-4 inline-block border-b-2 border-primary-container pb-1">
+                        OUR WORK
+                    </h2>
+<p class="text-3xl md:text-5xl font-light italic max-w-2xl">
+                        "Ideas alone don't matter. Execution does — see for yourself."
+                    </p>
+</div>
+<a class="uppercase font-bold tracking-widest text-sm border-b-2 border-on-surface hover:text-primary-container hover:border-primary-container transition-all" href="#">
+                    View more
+                </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Abstract geometric architectural 3D rendering with sharp edges and minimal lighting in a dark void atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIm7ciGgmj-msbCU_o_9N7xqvi_nou6gzaibZMyyULL3_N91fdVqcfhSQkzxcS4A0dRcgt6MchIOXIHwigP6w4Nij61oxHNJN6PSlFwZbc2kidsPWfGdEJZIdNIDTirufymX7pMOcjDbpJnp8sWN1F9ygqtL2gqU42iDbmFgfak4EK2dnjCT6V2HyI_qNQ4suIh7wJPZf_UXFDRsPSxftW0HhBVJ4YWU6mZQ_Rm0Adjb9aeDdWZkQLEu1eQErRN4WQHLoP0VLIj_Q"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="py-6 flex justify-between items-center border-b border-outline-variant/20">
+<span class="text-2xl font-bold font-headline tracking-tighter">KINETIC STRUCTURES</span>
+<span class="text-xs font-bold opacity-50 tracking-widest">BRANDING / 2024</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Macro photography of sleek industrial metal components with orange light reflections on black polished surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3HWfOy02WSysEGR6gizzFCz2_q3Hmhvm1g_CxKnPKqHrLCx7YTK_sTUFQ5wYEJ25cTlc3fURAkr2Qu17Jc_zGRC_ao28sqdUAq0nBtpBVN-efyNfoTdVZVZvnx9nToJ4SKu6JdqurBjzKKjvHyb2OK0e6wXWFHZHjHAbhbXNG1Z96QqZTIpdWu1cSV25KRR060QZ5BRJYp3JJ-osVR7ftUBmhbwxlLMfUV8gLcaQjuLPq8W2Q03VFnCZmutQ-ZxK-3z5lgABJLGU"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="py-6 flex justify-between items-center border-b border-outline-variant/20">
+<span class="text-2xl font-bold font-headline tracking-tighter">NEURAL NEXUS</span>
+<span class="text-xs font-bold opacity-50 tracking-widest">AI DEV / 2023</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Digital art piece showing flowing liquid metal textures with high contrast highlights and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPVwHC90UkLJ30jhSZjUplnUPWN-1fbarcXADV7sLS4Ay9Zkkn8iXno9bqC1Jrvzy-Yzfu1XtZY9iD9nKRqaXjuwxfjFeCKocFTwZQ46N1qcRSTzdcbOvHSA5RPe8AEF73bQ9kcMIGL3lZ3beeY9pDDurOgv79nF8i-FcedlkPg25j094GfXuS3RFKicAHZ6-o-NLhuqrIwIX0TcY1hNcf6DmvnGLlOI25c149i8JhiIzUequ_4_RuainkrXGVSEIUlbmHHcgfdp8"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="py-6 flex justify-between items-center border-b border-outline-variant/20">
+<span class="text-2xl font-bold font-headline tracking-tighter">VELOCITY UI</span>
+<span class="text-xs font-bold opacity-50 tracking-widest">PRODUCT / 2024</span>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Minimalist desk setup with premium mechanical keyboard and high-tech aesthetics in a dark moody studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCFGFMq7D9OYgT1j6N14ZSGxkhu8rVVKiURAq85GT6-9ZN-lNyswXn-oTAjTF68gX54-x1lN0RSLrjfUwthSqX9JD5J3r6IPMXS62Rl56jWFFpZ1G7Qcf_sGrza0Xd3zCtax3yYZVaoW2t7_TF1XuH1O5TNV2vzGVJxtCAzKW8MItaIM2D42sdbC2HGpCuVoLG9g93-uFImNDCsnkI7DIJ0xHK0HIaeUZdl7V0BhKbH6kunXYlj9gYWIaE9Ls0-_UGpQU1RjqCLTc"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="py-6 flex justify-between items-center border-b border-outline-variant/20">
+<span class="text-2xl font-bold font-headline tracking-tighter">CORE ENGINE</span>
+<span class="text-xs font-bold opacity-50 tracking-widest">FULLSTACK / 2023</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Services -->
+<section class="py-32 px-8 max-w-[1440px] mx-auto bg-[#0e0e0e]">
+<h2 class="text-5xl md:text-8xl font-black font-headline tracking-tighter uppercase mb-20 text-center">
+                OUR SERVICES
+            </h2>
+<div class="max-w-4xl mx-auto space-y-4">
+<!-- Accordion Item 1 -->
+<div class="border border-primary-container/30 hover:border-primary-container transition-colors p-8">
+<div class="flex justify-between items-center cursor-pointer group">
+<h3 class="text-xl md:text-3xl font-bold font-headline tracking-tighter">FULLSTACK DEV</h3>
+<span class="material-symbols-outlined text-primary-container group-hover:rotate-45 transition-transform">add</span>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="border border-primary-container/30 hover:border-primary-container transition-colors p-8">
+<div class="flex justify-between items-center cursor-pointer group">
+<h3 class="text-xl md:text-3xl font-bold font-headline tracking-tighter">UI/UX DESIGN</h3>
+<span class="material-symbols-outlined text-primary-container group-hover:rotate-45 transition-transform">add</span>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="border border-primary-container/30 hover:border-primary-container transition-colors p-8">
+<div class="flex justify-between items-center cursor-pointer group">
+<h3 class="text-xl md:text-3xl font-bold font-headline tracking-tighter">BRAND BUILDING</h3>
+<span class="material-symbols-outlined text-primary-container group-hover:rotate-45 transition-transform">add</span>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="border border-primary-container/30 hover:border-primary-container transition-colors p-8">
+<div class="flex justify-between items-center cursor-pointer group">
+<h3 class="text-xl md:text-3xl font-bold font-headline tracking-tighter">BRAND REVAMP</h3>
+<span class="material-symbols-outlined text-primary-container group-hover:rotate-45 transition-transform">add</span>
+</div>
+</div>
+<!-- Accordion Item 5: Expanded -->
+<div class="border-2 border-primary-container p-8 bg-primary-container/5 shadow-[0_0_40px_rgba(232,69,10,0.1)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl md:text-3xl font-bold font-headline tracking-tighter text-primary-container">AI &amp; AUTOMATION</h3>
+<span class="material-symbols-outlined text-primary-container rotate-45">add</span>
+</div>
+<div class="max-w-2xl">
+<p class="text-on-surface/90 leading-relaxed text-lg italic">
+                            Integrating bleeding-edge LLMs and custom automation pipelines into your existing ecosystem. We don't just add chatboxes; we re-engineer your core workflows for the post-human era of efficiency.
+                        </p>
+<div class="mt-8 flex gap-4">
+<span class="text-xs font-bold px-3 py-1 bg-primary-container text-on-primary">NEW ERA</span>
+<span class="text-xs font-bold px-3 py-1 bg-surface-container border border-outline-variant/30 text-on-surface">SCALABLE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-8 text-center bg-[#0a0a0a]">
+<h2 class="text-4xl md:text-7xl font-display uppercase tracking-widest mb-12">Ready to evolve?</h2>
+<button class="bg-primary-container text-on-primary px-12 py-6 text-2xl font-black font-headline uppercase tracking-tighter hover:bg-primary transition-all scale-100 hover:scale-105 active:scale-95">
+                START A PROJECT
+            </button>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#0e0e0e] w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full font-['Space_Grotesk'] text-sm uppercase tracking-widest">
+<div class="text-xl font-black text-[#e5e2e1] uppercase mb-8 md:mb-0">
+                BEYOND DESIGN
+            </div>
+<div class="flex flex-col items-center gap-4">
+<span class="text-[#e5e2e1]/60">© 2024 BEYOND DESIGN. ARCHITECTURAL ENERGY.</span>
+</div>
+<div class="flex gap-8 mt-8 md:mt-0">
+<a class="text-[#e5e2e1]/60 hover:text-[#E8450A] underline decoration-2 transition-opacity duration-200" href="#">INSTAGRAM</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#E8450A] underline decoration-2 transition-opacity duration-200" href="#">LINKEDIN</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#E8450A] underline decoration-2 transition-opacity duration-200" href="#">TWITTER</a>
+</div>
+</div>
+</footer>
+</body></html>
