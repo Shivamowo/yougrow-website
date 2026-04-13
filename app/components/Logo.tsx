@@ -18,8 +18,8 @@ export default function Logo({
         lineHeight: 1,
       }}
     >
-      Beyond{" "}
-      <span style={{ color: "var(--accent)" }}>Design</span>
+      You{" "}
+      <span style={{ color: "var(--accent)" }}>Grow</span>
     </span>
   );
 }

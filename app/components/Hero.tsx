@@ -4,146 +4,74 @@ import WaveCanvas from "@/app/components/WaveCanvas";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-end",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Black half — BEYOND DESIGN */}
-      <div
-        style={{
-          paddingTop: "8rem",
-          paddingLeft: "clamp(1.2rem, 5vw, 5rem)",
-          paddingRight: "clamp(1.2rem, 5vw, 5rem)",
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-        }}
-      >
-        <h1
-          className="anim-fade-up font-serif"
-          style={{
-            fontSize: "clamp(4.5rem, 14vw, 14rem)",
-            fontWeight: 900,
-            lineHeight: 0.85,
-            color: "#fff",
-            margin: 0,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          BEYOND
-          <br />
-          DESIGN
-        </h1>
+    <div id="home" className="w-full bg-[#f5f5f5]">
 
-        <p
-          className="anim-fade-up anim-delay-200 font-serif"
-          style={{
-            fontStyle: "italic",
-            fontWeight: 400,
-            fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)",
-            marginTop: "1rem",
-            color: "rgba(240,237,232,0.7)",
-            letterSpacing: "0.02em",
-          }}
-        >
-          you imagine
-        </p>
-      </div>
+      {/* SECTION 1: TOP - DARK */}
+      <section className="bg-black text-white w-full pb-8" style={{ paddingTop: "clamp(80px, 15vw, 90px)" }}>
+        <div style={{ padding: "0 clamp(1.2rem, 4vw, 3rem)" }} className="w-full text-left">
+          {/* Heading */}
+          <h1
+            className="font-serif font-black leading-[0.9] m-0 anim-fade-up anim-delay-100 uppercase"
+            style={{ fontSize: "clamp(3.5rem, 10vw, 8.5rem)", letterSpacing: "-0.02em" }}
+          >
+            BEYOND<br />DESIGN
+          </h1>
 
-      {/* Wave row */}
-      <div
-        className="anim-fade-up anim-delay-400"
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "clamp(60px, 8vw, 100px)",
-          marginTop: "0.5rem",
-        }}
-      >
-        <WaveCanvas />
-        <span
-          className="font-sans"
-          style={{
-            position: "absolute",
-            right: "clamp(1.2rem, 5vw, 5rem)",
-            bottom: "50%",
-            transform: "translateY(50%)",
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            letterSpacing: "0.2em",
-            color: "rgba(240,237,232,0.8)",
-            textTransform: "uppercase",
-            whiteSpace: "nowrap",
-          }}
-        >
-          we build
-        </span>
-      </div>
+          {/* Subtitle */}
+          <p className="mt-3 text-[clamp(1rem,1.5vw,1.2rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-200">
+            you imagine
+          </p>
+        </div>
 
-      {/* Light half — INDULGING EXPERIENCE */}
-      <div
-        style={{
-          background: "linear-gradient(180deg, #e8e4df 0%, #d5d0ca 100%)",
-          padding: "2rem clamp(1.2rem, 5vw, 5rem) 3.5rem",
-          position: "relative",
-        }}
-      >
-        {/* Orange bleed glow */}
+        {/* WAVE DIVIDER IN NORMAL FLOW */}
+        <div className="w-full relative z-10 anim-fade-up anim-delay-400 mt-12 mb-[-1px]">
+          <div style={{ height: "clamp(60px, 8vw, 100px)" }}>
+            <WaveCanvas />
+          </div>
+          <span
+            className="absolute font-sans text-[0.65rem] font-black tracking-[0.25em] text-white opacity-95 uppercase whitespace-nowrap"
+            style={{ right: "clamp(1.2rem, 4vw, 3rem)", top: "50%", transform: "translateY(-50%)" }}
+          >
+            we build
+          </span>
+        </div>
+      </section>
+
+      {/* SECTION 2: BOTTOM - LIGHT */}
+      <section className="bg-[#f5f5f5] text-black w-full relative pt-16 pb-24">
+        {/* Orange glow blob */}
         <div
           aria-hidden="true"
+          className="absolute pointer-events-none"
           style={{
-            position: "absolute",
-            top: "-60px",
-            left: "clamp(1rem, 3vw, 3rem)",
-            width: "320px",
-            height: "130px",
-            background: "radial-gradient(ellipse, rgba(255,100,40,0.28) 0%, transparent 70%)",
+            top: "0",
+            left: "clamp(1.2rem, 4vw, 3rem)",
+            width: "clamp(140px, 28vw, 300px)",
+            height: "clamp(55px, 10vw, 110px)",
+            background: "radial-gradient(ellipse, rgba(255,100,40,0.3) 0%, transparent 70%)",
             filter: "blur(32px)",
-            pointerEvents: "none",
           }}
         />
 
-        <h2
-          className="anim-fade-up anim-delay-500 font-serif"
-          style={{
-            fontSize: "clamp(3rem, 11vw, 11.5rem)",
-            fontWeight: 900,
-            lineHeight: 0.88,
-            color: "#0a0a0a",
-            margin: 0,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          INDULGING
-          <br />
-          EXPERIENCE
-        </h2>
+        <div style={{ padding: "0 clamp(1.2rem, 4vw, 3rem)" }} className="w-full flex flex-col md:items-end items-start text-left md:text-right relative z-10">
+          <div>
+            {/* Heading */}
+            <h2
+              className="font-serif font-black leading-[0.88] m-0 anim-fade-up anim-delay-500 uppercase"
+              style={{ fontSize: "clamp(2.5rem, 8vw, 7.5rem)", letterSpacing: "-0.02em" }}
+            >
+              INDULGING<br />EXPERIENCE
+            </h2>
 
-        <p
-          className="anim-fade-up anim-delay-700 font-sans"
-          style={{
-            marginTop: "1.5rem",
-            fontSize: "clamp(0.9rem, 1.6vw, 1.2rem)",
-            color: "rgba(10,10,10,0.65)",
-            fontWeight: 400,
-            letterSpacing: "0.01em",
-          }}
-        >
-          we don&apos;t just build websites, we build{" "}
-          <strong style={{ color: "#FF4D1C", fontWeight: 700 }}>
-            scalable
-          </strong>{" "}
-          experiences
-        </p>
-      </div>
-    </section>
+            {/* Subtext */}
+            <p className="mt-4 text-[clamp(0.85rem,1.4vw,1.1rem)] font-semibold opacity-90 font-sans anim-fade-up anim-delay-700 max-w-[80%] md:max-w-none text-black">
+              we don&apos;t just build websites, we build{" "}
+              <strong className="text-[#FF4D1C] font-black">scalable</strong>{" "}
+              experiences
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
