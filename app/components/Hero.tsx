@@ -7,25 +7,25 @@ export default function Hero() {
     <div id="home" className="w-full bg-[#f5f5f5]">
 
       {/* SECTION 1: TOP - DARK */}
-      <section className="bg-black text-white w-full pb-8" style={{ paddingTop: "clamp(80px, 15vw, 90px)" }}>
+      <section className="bg-black text-white w-full pb-2" style={{ paddingTop: "clamp(50px, 8vw, 70px)" }}>
         <div style={{ padding: "0 clamp(1.2rem, 4vw, 3rem)" }} className="w-full text-left">
           {/* Heading */}
           <h1
-            className="font-serif font-black leading-[0.9] m-0 anim-fade-up anim-delay-100 uppercase"
-            style={{ fontSize: "clamp(3.5rem, 10vw, 8.5rem)", letterSpacing: "-0.02em" }}
+            className="font-serif font-black leading-[0.85] m-0 anim-fade-up anim-delay-100 uppercase"
+            style={{ fontSize: "clamp(3rem, 8vw, 7.5rem)", letterSpacing: "-0.02em" }}
           >
             BEYOND<br />DESIGN
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-3 text-[clamp(1rem,1.5vw,1.2rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-200">
+          <p className="mt-2 text-[clamp(0.9rem,1.2vw,1.1rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-200">
             you imagine
           </p>
         </div>
 
         {/* WAVE DIVIDER IN NORMAL FLOW */}
-        <div className="w-full relative z-10 anim-fade-up anim-delay-400 mt-12 mb-[-1px]">
-          <div style={{ height: "clamp(60px, 8vw, 100px)" }}>
+        <div className="w-full relative z-10 anim-fade-up anim-delay-400 mt-6 mb-0">
+          <div style={{ height: "clamp(40px, 5vw, 70px)" }}>
             <WaveCanvas />
           </div>
           <span
@@ -38,7 +38,7 @@ export default function Hero() {
       </section>
 
       {/* SECTION 2: BOTTOM - LIGHT */}
-      <section className="bg-[#f5f5f5] text-black w-full relative pt-16 pb-24">
+      <section className="bg-[#f5f5f5] text-black w-full relative pt-8 pb-8">
         {/* Orange glow blob */}
         <div
           aria-hidden="true"
@@ -57,14 +57,14 @@ export default function Hero() {
           <div>
             {/* Heading */}
             <h2
-              className="font-serif font-black leading-[0.88] m-0 anim-fade-up anim-delay-500 uppercase"
-              style={{ fontSize: "clamp(2.5rem, 8vw, 7.5rem)", letterSpacing: "-0.02em" }}
+              className="font-serif font-black leading-[0.85] m-0 anim-fade-up anim-delay-500 uppercase"
+              style={{ fontSize: "clamp(2rem, 7vw, 6.5rem)", letterSpacing: "-0.02em" }}
             >
               INDULGING<br />EXPERIENCE
             </h2>
 
             {/* Subtext */}
-            <p className="mt-4 text-[clamp(0.85rem,1.4vw,1.1rem)] font-semibold opacity-90 font-sans anim-fade-up anim-delay-700 max-w-[80%] md:max-w-none text-black">
+            <p className="mt-3 text-[clamp(0.75rem,1.2vw,1rem)] font-semibold opacity-90 font-sans anim-fade-up anim-delay-700 max-w-[80%] md:max-w-none text-black">
               we don&apos;t just build websites, we build{" "}
               <strong className="text-[#FF4D1C] font-black">scalable</strong>{" "}
               experiences
