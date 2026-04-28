@@ -21,9 +21,9 @@ export default function Footer() {
         gap: "1.5rem",
       }}
     >
-      <Link href="/" style={{ textDecoration: "none" }} aria-label="Beyond Design home">
+      <a href="/" style={{ textDecoration: "none" }} aria-label="Beyond Design home">
         <Logo size="sm" />
-      </Link>
+      </a>
 
       <p
         className="font-sans"

@@ -77,12 +77,15 @@ export default function WorkPage() {
                 }}
                 className="work-card"
               >
-                <Image
+                <img
                   src={item.src}
                   alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  style={{ objectFit: "cover" }}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"
+                  }}
                 />
                 <div className="work-card-overlay" aria-hidden="true" />
               </div>

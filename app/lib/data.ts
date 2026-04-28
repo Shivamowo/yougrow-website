@@ -20,22 +20,24 @@ export interface Service {
 
 export const WORK_ITEMS: WorkItem[] = [
   {
-    id: "kinetic-structures",
-    title: "KINETIC STRUCTURES",
-    category: "BRANDING",
-    year: "2024",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIm7ciGgmj-msbCU_o_9N7xqvi_nou6gzaibZMyyULL3_N91fdVqcfhSQkzxcS4A0dRcgt6MchIOXIHwigP6w4Nij61oxHNJN6PSlFwZbc2kidsPWfGdEJZIdNIDTirufymX7pMOcjDbpJnp8sWN1F9ygqtL2gqU42iDbmFgfak4EK2dnjCT6V2HyI_qNQ4suIh7wJPZf_UXFDRsPSxftW0HhBVJ4YWU6mZQ_Rm0Adjb9aeDdWZkQLEu1eQErRN4WQHLoP0VLIj_Q",
+    id: "Pkoin",
+    title: "Pkoin - Crypto", // <-- Change this for the bold heading on the grid
+    category: "Revamp",        // <-- Change this for the small category text
+    year: "2026",                // <-- Change the year
+    // CHANGE `src` to your new image path! (e.g. src: "/project1.jpg" if the image is in the public folder)
+    src: "/img-sources/pkoin.png",
     alt: "Abstract geometric architectural 3D rendering with sharp edges and minimal lighting",
+    // Note: The description is NOT shown on the grid cards. It is only shown on the full project detail page.
     description:
       "A comprehensive branding identity for a structural engineering firm. We designed a visual language that embodies precision, force, and geometric beauty — from mark to motion.",
     tags: ["Brand Identity", "Visual System", "Print"],
   },
   {
-    id: "neural-nexus",
-    title: "NEURAL NEXUS",
-    category: "AI DEV",
-    year: "2023",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3HWfOy02WSysEGR6gizzFCz2_q3Hmhvm1g_CxKnPKqHrLCx7YTK_sTUFQ5wYEJ25cTlc3fURAkr2Qu17Jc_zGRC_ao28sqdUAq0nBtpBVN-efyNfoTdVZVZvnx9nToJ4SKu6JdqurBjzKKjvHyb2OK0e6wXWFHZHjHAbhbXNG1Z96QqZTIpdWu1cSV25KRR060QZ5BRJYp3JJ-osVR7ftUBmhbwxlLMfUV8gLcaQjuLPq8W2Q03VFnCZmutQ-ZxK-3z5lgABJLGU",
+    id: "Legacy-Chain",
+    title: "LEGACY CHAIN",
+    category: "STARTUP",
+    year: "2026",
+    src: "/img-sources/Frame 1.jpg",
     alt: "High-tech industrial metal components with orange light reflections",
     description:
       "End-to-end AI platform development for a deep-tech startup. Built custom LLM pipelines, real-time inference APIs, and an intuitive dashboard for model management.",
