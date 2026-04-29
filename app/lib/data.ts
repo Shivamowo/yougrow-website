@@ -44,11 +44,11 @@ export const WORK_ITEMS: WorkItem[] = [
     tags: ["LLM Integration", "API Development", "Dashboard UI"],
   },
   {
-    id: "velocity-ui",
-    title: "VELOCITY UI",
-    category: "PRODUCT",
-    year: "2024",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPVwHC90UkLJ30jhSZjUplnUPWN-1fbarcXADV7sLS4Ay9Zkkn8iXno9bqC1Jrvzy-Yzfu1XtZY9iD9nKRqaXjuwxfjFeCKocFTwZQ46N1qcRSTzdcbOvHSA5RPe8AEF73bQ9kcMIGL3lZ3beeY9pDDurOgv79nF8i-FcedlkPg25j094GfXuS3RFKicAHZ6-o-NLhuqrIwIX0TcY1hNcf6DmvnGLlOI25c149i8JhiIzUequ_4_RuainkrXGVSEIUlbmHHcgfdp8",
+    id: "Dreelio",
+    title: "DREELIO",
+    category: "BUSINESST",
+    year: "2026",
+    src: "/img-sources/dreelio.jpeg",
     alt: "Flowing liquid metal textures with high contrast highlights",
     description:
       "A complete product design system and component library for a SaaS platform. Reduced design-to-dev handoff time by 60% with our bespoke Figma-to-code pipeline.",
