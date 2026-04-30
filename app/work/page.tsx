@@ -79,15 +79,12 @@ export default function WorkPage() {
                   width: "100%",
                 }}
               >
-                <img
+                <Image
                   src={item.src}
                   alt={item.alt}
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
 
@@ -114,25 +111,6 @@ export default function WorkPage() {
           ))}
         </div>
 
-        {/* View more */}
-        <div style={{ marginTop: "3rem" }}>
-          <a
-            href="#"
-            className="font-serif anim-fade-up"
-            style={{
-              fontSize: "clamp(1.5rem, 5vw, 2rem)",
-              fontWeight: 600,
-              color: "var(--fg)",
-              textDecoration: "none",
-              display: "inline-block",
-              borderBottom: "1px solid var(--fg)",
-              lineHeight: 1,
-              paddingBottom: "0.1rem",
-            }}
-          >
-            View more  →
-          </a>
-        </div>
       </section>
 
       {/* CTA strip */}

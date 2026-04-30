@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "AI automation",
   ],
   openGraph: {
-    siteName: "YourGrow",
+    siteName: "YouGrow",
     type: "website",
   },
 };

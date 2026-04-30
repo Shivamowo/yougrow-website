@@ -46,7 +46,7 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "Dreelio",
     title: "DREELIO",
-    category: "BUSINESST",
+    category: "BUSINESS",
     year: "2026",
     src: "/img-sources/dreelio.jpeg",
     alt: "Flowing liquid metal textures with high contrast highlights",

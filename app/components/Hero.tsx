@@ -50,7 +50,7 @@ export default function Hero() {
         <div style={{ padding: "0 clamp(0.8rem, 3vw, 2.5rem)" }} className="w-full flex flex-col items-end text-right relative z-10">
           <div>
             {/* Subtitle */}
-            <p className="pr-1.5 mb-[-8] text-[clamp(1.5rem,1.6vw,1.4rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-400">
+            <p className="pr-1.5 mb-[-8] text-[clamp(1rem,1.6vw,1.5rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-400">
               we build
             </p>
 

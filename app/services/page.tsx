@@ -111,6 +111,7 @@ export default function ServicesPage() {
         }}
       >
         <div
+          className="services-why-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",

@@ -22,9 +22,9 @@ export default function Footer() {
       }}
     >
       <div style={{ flex: 1, display: "flex", justifyContent: "flex-start" }}>
-        <a href="/" style={{ textDecoration: "none" }} aria-label="YouGrow home">
+        <Link href="/" aria-label="YouGrow home" style={{ textDecoration: "none" }}>
           <Logo size="sm" />
-        </a>
+        </Link>
       </div>
 
       <p

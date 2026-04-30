@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import ProjectButton from "@/app/components/ProjectButton";
 
 export default function CTA() {

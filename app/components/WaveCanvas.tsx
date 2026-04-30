@@ -41,7 +41,7 @@ export default function WaveCanvas() {
           Math.sin((x / W) * Math.PI * 2.5 + offsetRef.current * 0.015) * H * 0.28 +
           Math.sin((x / W) * Math.PI * 4.5 + offsetRef.current * 0.02) * H * 0.14 +
           Math.sin((x / W) * Math.PI * 11 + offsetRef.current * 0.025) * H * 0.04;
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        if (x === 0) { ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
       }
       ctx.stroke();
       ctx.restore();
@@ -64,7 +64,7 @@ export default function WaveCanvas() {
             Math.sin((x / W) * Math.PI * 2.5 + offsetRef.current * 0.015 + phaseShift1) * H * 0.28 * ampMod +
             Math.sin((x / W) * Math.PI * 4.5 + offsetRef.current * 0.02 + phaseShift2) * H * 0.14 +
             Math.sin((x / W) * Math.PI * 11 + offsetRef.current * 0.025 + phaseShift1 * 1.5) * H * 0.04;
-          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          if (x === 0) { ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
         }
         ctx.stroke();
       }
