@@ -10,7 +10,7 @@ export default function Hero() {
       <section className="bg-black text-white w-full h-[48vh] sm:h-[55vh] pb-4 sm:pb-6 flex flex-col " style={{ paddingTop: "clamp(70px, 10vw, 110px)" }}>
         <div style={{ padding: "0 clamp(0.8rem, 3vw, 2.5rem)" }} className="w-full text-left">
           {/* Subtitle */}
-          <p className="pl-1.5 mb-[-4] text-[clamp(1rem,1.6vw,1.4rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-100">
+          <p className="pl-1.5 mb-[-4px] text-[clamp(1rem,1.6vw,1.4rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-100">
             you imagine
           </p>
 
@@ -50,7 +50,7 @@ export default function Hero() {
         <div style={{ padding: "0 clamp(0.8rem, 3vw, 2.5rem)" }} className="w-full flex flex-col items-end text-right relative z-10">
           <div>
             {/* Subtitle */}
-            <p className="pr-1.5 mb-[-8] text-[clamp(1rem,1.6vw,1.5rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-400">
+            <p className="pr-1.5 mb-[-8px] text-[clamp(1rem,1.6vw,1.5rem)] font-bold italic opacity-90 font-serif anim-fade-up anim-delay-400">
               we build
             </p>
 
