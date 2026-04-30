@@ -6,7 +6,7 @@ import ServicesAccordion from "@/app/components/ServicesAccordion";
 import CTA from "@/app/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Beyond Design — Award-Winning Digital Agency",
+  title: "YouGrow — Award-Winning Digital Agency",
   description:
     "We build indulging digital experiences. Fullstack development, UI/UX design, brand building, and AI automation.",
 };

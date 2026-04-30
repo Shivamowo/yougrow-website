@@ -4,7 +4,7 @@ import Logo from "@/app/components/Logo";
 const SOCIALS = [
   { label: "INSTAGRAM", href: "#" },
   { label: "LINKEDIN", href: "#" },
-  { label: "TWITTER / X", href: "#" },
+  { label: "TWITTER / X", href: "https://x.com/YouGrowwai" },
 ] as const;
 
 export default function Footer() {
@@ -21,40 +21,45 @@ export default function Footer() {
         gap: "1.5rem",
       }}
     >
-      <Link href="/" style={{ textDecoration: "none" }} aria-label="Beyond Design home">
-        <Logo size="sm" />
-      </Link>
+      <div style={{ flex: 1, display: "flex", justifyContent: "flex-start" }}>
+        <a href="/" style={{ textDecoration: "none" }} aria-label="YouGrow home">
+          <Logo size="sm" />
+        </a>
+      </div>
 
       <p
         className="font-sans"
         style={{
           fontSize: "0.68rem",
-          color: "rgba(240,237,232,0.3)",
+          color: "rgba(240, 237, 232, 0.41)",
           letterSpacing: "0.1em",
-          margin: 0,
+          margin: "0",
           textAlign: "center",
         }}
       >
-        © {new Date().getFullYear()} BEYOND DESIGN. ALL RIGHTS RESERVED.
+        © {new Date().getFullYear()} YouGrow.AI || ALL RIGHTS RESERVED
       </p>
 
-      <nav
-        aria-label="Social links"
-        style={{ display: "flex", gap: "1.8rem" }}
-      >
-        {SOCIALS.map(({ label, href }) => (
-          <a
-            key={label}
-            href={href}
-            className="nav-link"
-            style={{ fontSize: "0.68rem" }}
-            aria-label={`Follow us on ${label}`}
-            rel="noopener noreferrer"
-          >
-            {label}
-          </a>
-        ))}
-      </nav>
+      <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+        <nav
+          aria-label="Social links"
+          style={{ display: "flex", gap: "1rem" }}
+        >
+          {SOCIALS.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              className="nav-link"
+              style={{ fontSize: "0.7rem" }}
+              aria-label={`Follow us on ${label}`}
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </footer>
   );
 }

@@ -21,8 +21,8 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Beyond Design — Award-Winning Digital Agency",
-    template: "%s | Beyond Design",
+    default: "YouGrow — Award-Winning Digital Agency",
+    template: "%s | YouGrow",
   },
   description:
     "We don't just build websites, we build scalable experiences. Fullstack dev, UI/UX design, brand building, and AI automation.",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "AI automation",
   ],
   openGraph: {
-    siteName: "Beyond Design",
+    siteName: "YourGrow",
     type: "website",
   },
 };

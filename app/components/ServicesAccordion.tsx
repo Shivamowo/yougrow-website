@@ -127,6 +127,7 @@ export default function ServicesAccordion({
             }}
           >
             OUR SERVICES
+            <div style={{ height: "2px", width: "36rem", background: "#FF4D1C", margin: "-.5rem auto 3rem auto" }} />
           </h2>
         )}
 

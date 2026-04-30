@@ -4,7 +4,7 @@ import BookingForm from "@/app/components/BookingForm";
 export const metadata: Metadata = {
   title: "Book a Call",
   description:
-    "Ready to start your project? Book a discovery call with the Beyond Design team — we'll respond within 24 hours.",
+    "Ready to start your project? Book a discovery call with the YouGrow team — we'll respond within 24 hours.",
 };
 
 const REASONS = [
@@ -86,7 +86,7 @@ export default function ContactPage() {
             >
               Why teams choose
               <br />
-              <span style={{ color: "var(--accent)" }}>Beyond Design</span>
+              <span style={{ color: "var(--accent)" }}>YouGrow</span>
             </h2>
 
             {REASONS.map(({ icon, title, body }) => (

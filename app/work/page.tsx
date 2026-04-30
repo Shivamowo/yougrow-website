@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { WORK_ITEMS } from "@/app/lib/data";
+import ProjectButton from "@/app/components/ProjectButton";
 
 export const metadata: Metadata = {
   title: "Our Work",
   description:
-    "Explore Beyond Design's portfolio — branding, AI development, UI/UX, and fullstack engineering projects.",
+    "Explore YouGrow's portfolio — branding, AI development, UI/UX, and fullstack engineering projects.",
 };
 
 export default function WorkPage() {
@@ -13,9 +14,6 @@ export default function WorkPage() {
     <>
       {/* Page hero */}
       <div className="page-hero">
-        <p className="section-eyebrow anim-fade-up" style={{ marginBottom: "1.5rem" }}>
-          PORTFOLIO
-        </p>
         <h1
           className="font-serif anim-fade-up anim-delay-100"
           style={{
@@ -49,89 +47,91 @@ export default function WorkPage() {
       {/* Full grid */}
       <section
         style={{
-          padding: "4rem clamp(1.2rem, 5vw, 5rem) 8rem",
+          padding: "4rem clamp(1.2rem, 5vw, 5rem) 6rem",
           background: "var(--bg)",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", gap: "6rem" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, max(400px, calc(50% - 2rem))), 1fr))",
+            gap: "2.5rem"
+          }}
+        >
           {WORK_ITEMS.map((item, i) => (
             <article
               key={item.id}
               id={item.id}
-              className="reveal"
+              className={`anim-fade-up anim-delay-${(i % 4) * 100 + 300}`}
               style={{
-                display: "grid",
-                gridTemplateColumns: i % 2 === 0 ? "1.2fr 0.8fr" : "0.8fr 1.2fr",
-                gap: "3rem",
-                alignItems: "center",
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
               }}
             >
-              {/* Image — always left on even, right on odd */}
+              {/* Image Container */}
               <div
                 style={{
-                  order: i % 2 === 0 ? 1 : 2,
                   position: "relative",
                   aspectRatio: "16/10",
                   background: "#1a1a1a",
                   overflow: "hidden",
+                  width: "100%",
                 }}
-                className="work-card"
               >
-                <Image
+                <img
                   src={item.src}
                   alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  style={{ objectFit: "cover" }}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
-                <div className="work-card-overlay" aria-hidden="true" />
               </div>
 
-              {/* Copy */}
-              <div style={{ order: i % 2 === 0 ? 2 : 1 }}>
-                <p
-                  className="section-eyebrow"
-                  style={{ marginBottom: "1rem" }}
-                >
-                  {item.category} / {item.year}
-                </p>
-                <h2
-                  className="font-serif"
-                  style={{
-                    fontSize: "clamp(1.8rem, 3.5vw, 3.5rem)",
-                    fontWeight: 900,
-                    lineHeight: 0.95,
-                    letterSpacing: "-0.02em",
-                    color: "var(--fg)",
-                    margin: "0 0 1.5rem",
-                  }}
-                >
+              {/* Black Footer Bar */}
+              <div
+                style={{
+                  background: "#080808",
+                  padding: "1rem 1.5rem",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  border: "1px solid rgba(255,255,255,0.05)",
+                  borderTop: "none"
+                }}
+              >
+                <span className="font-sans" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: 300, letterSpacing: "0.02em" }}>
                   {item.title}
-                </h2>
-                <p
-                  className="font-sans"
-                  style={{
-                    color: "rgba(240,237,232,0.6)",
-                    lineHeight: 1.75,
-                    fontSize: "0.95rem",
-                    marginBottom: "2rem",
-                    maxWidth: "400px",
-                  }}
-                >
-                  {item.description}
-                </p>
-
-                {/* Tags */}
-                <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="tag-pill">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                </span>
+                <span style={{ color: "#fff", fontSize: ".6rem" }}>
+                  →
+                </span>
               </div>
             </article>
           ))}
+        </div>
+
+        {/* View more */}
+        <div style={{ marginTop: "3rem" }}>
+          <a
+            href="#"
+            className="font-serif anim-fade-up"
+            style={{
+              fontSize: "clamp(1.5rem, 5vw, 2rem)",
+              fontWeight: 600,
+              color: "var(--fg)",
+              textDecoration: "none",
+              display: "inline-block",
+              borderBottom: "1px solid var(--fg)",
+              lineHeight: 1,
+              paddingBottom: "0.1rem",
+            }}
+          >
+            View more  →
+          </a>
         </div>
       </section>
 
@@ -159,9 +159,7 @@ export default function WorkPage() {
         >
           Like what you see?
         </p>
-        <a href="/contact" className="btn-primary font-sans" style={{ fontSize: "0.82rem", padding: "1rem 2.5rem" }}>
-          START YOUR PROJECT →
-        </a>
+        <ProjectButton text="START YOUR PROJECT" />
       </div>
     </>
   );

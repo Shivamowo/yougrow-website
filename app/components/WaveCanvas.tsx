@@ -31,34 +31,43 @@ export default function WaveCanvas() {
 
       // Glow layer
       ctx.save();
-      ctx.filter = "blur(8px)";
-      ctx.strokeStyle = "rgba(255, 100, 40, 0.4)";
-      ctx.lineWidth = 4;
+      ctx.filter = "blur(20px)";
+      ctx.strokeStyle = "rgba(255, 100, 40, 0.5)";
+      ctx.lineWidth = 10;
       ctx.beginPath();
-      for (let x = 0; x <= W; x++) {
+      for (let x = 0; x <= W; x += 4) {
         const y =
           H / 2 +
-          Math.sin((x / W) * Math.PI * 3 + offsetRef.current * 0.018) * H * 0.28 +
-          Math.sin((x / W) * Math.PI * 7 + offsetRef.current * 0.025) * H * 0.12;
+          Math.sin((x / W) * Math.PI * 2.5 + offsetRef.current * 0.015) * H * 0.28 +
+          Math.sin((x / W) * Math.PI * 4.5 + offsetRef.current * 0.02) * H * 0.14 +
+          Math.sin((x / W) * Math.PI * 11 + offsetRef.current * 0.025) * H * 0.04;
         x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
       ctx.stroke();
       ctx.restore();
 
-      // Sharp layer
-      ctx.strokeStyle = "#FF4D1C";
-      ctx.lineWidth = 2.5;
-      ctx.shadowColor = "rgba(255,77,28,0.7)";
-      ctx.shadowBlur = 14;
-      ctx.beginPath();
-      for (let x = 0; x <= W; x++) {
-        const y =
-          H / 2 +
-          Math.sin((x / W) * Math.PI * 3 + offsetRef.current * 0.018) * H * 0.28 +
-          Math.sin((x / W) * Math.PI * 7 + offsetRef.current * 0.025) * H * 0.12;
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      // Sharp layer - Multiple abstract lines
+      const numLines = 15;
+      ctx.strokeStyle = "rgba(255, 77, 28, 0.4)";
+      ctx.lineWidth = 1.2;
+      ctx.shadowColor = "rgba(255, 77, 28, 0.3)";
+      ctx.shadowBlur = 4;
+      
+      for (let i = 0; i < numLines; i++) {
+        const phaseShift1 = i * 0.19;
+        const phaseShift2 = i * -0.11;
+        const ampMod = 1 + Math.sin(i) * 0.15;
+        ctx.beginPath();
+        for (let x = 0; x <= W; x += 2) {
+          const y =
+            H / 2 +
+            Math.sin((x / W) * Math.PI * 2.5 + offsetRef.current * 0.015 + phaseShift1) * H * 0.28 * ampMod +
+            Math.sin((x / W) * Math.PI * 4.5 + offsetRef.current * 0.02 + phaseShift2) * H * 0.14 +
+            Math.sin((x / W) * Math.PI * 11 + offsetRef.current * 0.025 + phaseShift1 * 1.5) * H * 0.04;
+          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
       }
-      ctx.stroke();
       ctx.shadowBlur = 0;
 
       animRef.current = requestAnimationFrame(draw);

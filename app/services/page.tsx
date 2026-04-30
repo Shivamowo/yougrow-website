@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import ServicesAccordion from "@/app/components/ServicesAccordion";
+import ProjectButton from "@/app/components/ProjectButton";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Beyond Design offers fullstack development, UI/UX design, brand building, brand revamp, and AI automation services.",
+    "YouGrow offers fullstack development, UI/UX design, brand building, brand revamp, and AI automation services.",
 };
 
 const STATS = [
@@ -119,7 +120,7 @@ export default function ServicesPage() {
         >
           <div>
             <p className="section-eyebrow" style={{ marginBottom: "1.5rem" }}>
-              WHY BEYOND DESIGN
+              WHY YOUGROW
             </p>
             <h2
               className="font-serif"
@@ -164,13 +165,7 @@ export default function ServicesPage() {
               proprietary platforms.
             </p>
             <div style={{ marginTop: "2.5rem" }}>
-              <a
-                href="/contact"
-                className="btn-primary font-sans"
-                style={{ fontSize: "0.82rem", padding: "0.9rem 2rem" }}
-              >
-                GET A QUOTE →
-              </a>
+              <ProjectButton text="GET A QUOTE" />
             </div>
           </div>
         </div>

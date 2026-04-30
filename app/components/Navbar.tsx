@@ -62,9 +62,9 @@ export default function Navbar() {
       }}
     >
       {/* Logo */}
-      <Link href="/" aria-label="Beyond Design — Home" style={{ textDecoration: "none", minWidth: "fit-content" }}>
+      <a href="/" aria-label="YouGrow — Home" style={{ textDecoration: "none", minWidth: "fit-content" }}>
         <Logo />
-      </Link>
+      </a>
 
       {!isMobile ? (
         <>

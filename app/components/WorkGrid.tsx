@@ -54,9 +54,21 @@ export default function WorkGrid({ limit, showHeader = true }: WorkGridProps) {
           }}
         >
           <div>
-            <p className="section-eyebrow" style={{ marginBottom: "1rem" }}>
+            <p className="font-serif"
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+                fontWeight: 800,
+                letterSpacing: "0.08em",
+                color: "#FF4D1C",
+                opacity: 0.9,
+                lineHeight: 1,
+                display: "inline-flex",
+                alignItems: "center",
+                marginTop: -100
+              }}>
               OUR WORK
             </p>
+            <div style={{ height: "1px", width: "6rem", background: "#fff", margin: ".6rem 0 3rem 0" }} />
             <p
               className="font-serif"
               style={{
@@ -64,13 +76,11 @@ export default function WorkGrid({ limit, showHeader = true }: WorkGridProps) {
                 fontStyle: "italic",
                 fontWeight: 400,
                 color: "rgba(240,237,232,0.8)",
-                maxWidth: "500px",
-                lineHeight: 1.35,
-                margin: 0,
+                lineHeight: 1.25,
+                margin: 4
               }}
             >
-              &ldquo;Ideas alone don&apos;t matter.
-              <br />
+              &ldquo;Ideas alone don&apos;t matter.<br />
               Execution does — see for yourself.&rdquo;
             </p>
           </div>
@@ -91,7 +101,8 @@ export default function WorkGrid({ limit, showHeader = true }: WorkGridProps) {
             </Link>
           )}
         </div>
-      )}
+      )
+      }
 
       {/* Grid */}
       <div
@@ -120,12 +131,15 @@ export default function WorkGrid({ limit, showHeader = true }: WorkGridProps) {
                   position: "relative",
                 }}
               >
-                <Image
+                <img
                   src={item.src}
                   alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: "cover" }}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"
+                  }}
                 />
                 <div className="work-card-overlay" aria-hidden="true" />
 
@@ -184,6 +198,6 @@ export default function WorkGrid({ limit, showHeader = true }: WorkGridProps) {
           </article>
         ))}
       </div>
-    </section>
+    </section >
   );
 }
